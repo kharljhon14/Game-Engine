@@ -3,6 +3,7 @@ function userControl() {
   let width = gEngine.Core.mWidth;
   let height = gEngine.Core.mHeight;
   let context = gEngine.Core.mContext;
+  let gObjectNum = 0;
 
   document.addEventListener("keydown", (evt) => {
     if (evt.key === "f") {
@@ -13,6 +14,11 @@ function userControl() {
         Math.random() * 30 + 10,
         Math.random() * 30 + 10
       ); // width and height location
+      let r1 = new rectangle(
+        new Vec2(Math.random() * width * 0.8, Math.random() * height * 0.8),
+        Math.random() * 30 + 10,
+        Math.random() * 30 + 10
+      );
     }
 
     if (evt.key === "g") {
@@ -31,6 +37,11 @@ function userControl() {
       //Radius
       context.closePath();
       context.stroke();
+
+      let r1 = new circle(
+        new Vec2(Math.random() * width * 0.8, Math.random() * height * 0.8),
+        Math.random() * 10 + 20
+      );
     }
   });
 }

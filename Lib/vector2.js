@@ -24,7 +24,7 @@ Vector2.prototype.dot = function (vector) {
   return this.x * vector.y + this.y * vector.x;
 };
 
-vector.prototype.cross = function (vector) {
+Vector2.prototype.cross = function (vector) {
   return this.x * vector.y - this.y * vector.x;
 };
 
@@ -50,7 +50,7 @@ Vector2.prototype.normalize = function () {
   return new Vector2(this.x * len, this.y * len);
 };
 
-vector2.prototype.distance = function (vector) {
+Vector2.prototype.distance = function (vector) {
   let x = this.x - vector.x;
   let y = this.y - vector.y;
 
